@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/style.css">
+
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/jquery-3.3.1.min.js"></script>
+		<script src="js/cart.js"></script>
+
+		<!--
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		-->
+
+    <title>Магазинчик</title>
+  </head>
+  <body> 
+	<div class="container">
+
+		<div class='d-flex flex-row mb-3'>
+			<img class='ml-3 img-logo' src='img/logo.png' alt='logo'> 
+			<div class='media-body mt-3'>
+				<h1 class='text-center'>Библиотека PDA International RU</h1>
+				<h3 class='text-center'> Здесь вы можете ознакомиться и приобрести учебники,
+				 представленные в наличии.</h3>
+			</div>
+		</div>
+
+		<div class='row'>
+			<div class='col-md-8 order-md-1'>
+        <div class="d-flex justify-content-center">
+          <div id="content-loading-spinner" class="spinner-grow" role="status">
+            <span class="sr-only">Загрузка корзины...</span>
+          </div>
+        </div>
+				<ul id='content-list' class="list-unstyled">
+					<!-- Content spawns here -->
+				</ul>
+			</div>
+
+			<!-- Cart -->
+			<div id=cart-container class="col-md-4 order-md-2 mb-4">
+
+        <h4 class="d-flex justify-content-between align-items-center mb-3">
+          <span class="text-muted">Корзина</span>
+          <span id="total-count" class="badge badge-secondary badge-pill">0</span>
+        </h4>
+
+        <div class="d-flex justify-content-center">
+					<div id="cart-loading-spinner" class="spinner-border m-2" role="status">
+						<span class="sr-only">Загрузка корзины...</span>
+					</div>
+				</div>
+
+        <ul id="cart-list" class="list-group mb-3">
+        	<!-- JS generate cart items here -->
+        </ul>
+
+        <form id="checkout-form" class="needs-validation d-none" novalidate>
+          <div class="mb-2">
+            <label for="firstName">Имя</label>
+            <input type="text" class="form-control" name="firstName" placeholder="" value="" required>
+            <div class="invalid-feedback">
+              Нам обязательно нужно знать ваше имя.
+            </div>
+          </div>
+          <div class="mb-2">
+            <label for="lastName">Фамилия</label>
+            <input type="text" class="form-control" name="lastName" placeholder="" value="" required>
+            <div class="invalid-feedback">
+              Нам обязательно нужно знать вашу фамилию.
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" name="email" placeholder="you@example.com" required>
+            <div class="invalid-feedback">
+              Оставьте контактный email, на него придет оповещение с номером заказа.
+            </div>
+        	</div>
+
+        	<div class="mb-3">
+            <label for="email">Телефон</label>
+            <input type="tel" class="form-control" name="tel" placeholder="+7-999-123-45-67" required>
+            <div class="invalid-feedback">
+              Оставьте телефон и мы свяжемся с вами для уточнения деталей заказа.
+            </div>
+        	</div>
+
+	        <div class="mb-2 input-group-append justify-content-center">
+	        	<button id="submit-btn" class="btn btn-primary btn-block">Оформить заказ</button>
+	        </div>
+
+		      <div class="d-flex justify-content-center">
+						<div id=submit-spinner class="spinner-grow d-none" role="status">
+							<span class="sr-only">Оформление заказа...</span>
+						</div>
+					</div>
+
+        </form>
+
+        <div id=submit-msg class="d-flex">
+				</div>
+
+        <div class="mb-2 input-group-append justify-content-center">
+        	<button id="checkout-btn" class="btn btn-secondary btn-block">Оформить заказ</button>
+        </div>
+
+      </div>
+
+		</div>
+		<hr>
+		<footer>
+			<p>&copy; PDA International RU 2019 </p>
+		</footer>
+		
+	</div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+		<!--
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+		-->
+  </body>
+</html>
